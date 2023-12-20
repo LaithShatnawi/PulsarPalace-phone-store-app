@@ -1,0 +1,23 @@
+.pagination {
+  padding: 0 0 6.25rem 0rem;
+  display: flex;
+  justify-content: center;
+
+  .m-4081bf90{
+    display: flex;
+    gap: 10px;
+  }
+
+  button{
+    font-family: "poppins",sans-serif;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+}

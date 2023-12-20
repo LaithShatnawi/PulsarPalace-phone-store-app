@@ -1,0 +1,16 @@
+.cards_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 6.25rem 6.25rem;
+  font-family: "poppins", sans-serif;
+}
+
+.products_title {
+  color: white;
+  font-family: "poppins", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 6.25rem;
+}

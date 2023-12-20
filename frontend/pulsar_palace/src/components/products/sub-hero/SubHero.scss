@@ -1,0 +1,111 @@
+.subhero_container {
+  height: 100svh;
+  position: relative;
+  overflow-y: hidden;
+  background: url("https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  .animated {
+    position: absolute;
+    width: 15rem;
+
+    &:nth-child(1) {
+      left: 10rem;
+    }
+    &:nth-child(2) {
+      left: 30rem;
+    }
+    &:nth-child(3) {
+      left: 50rem;
+    }
+    &:nth-child(4) {
+      left: 70rem;
+    }
+    &:nth-child(5) {
+      left: 10rem;
+      top: 31rem;
+    }
+    &:nth-child(6) {
+      left: 30rem;
+      top: 30rem;
+    }
+    &:nth-child(7) {
+      left: 50rem;
+      top: 30rem;
+    }
+    &:nth-child(8) {
+      left: 70rem;
+      top: 30rem;
+    }
+    &:nth-child(9) {
+      left: 10rem;
+      top: -31rem;
+    }
+    &:nth-child(10) {
+      left: 30rem;
+      top: -30rem;
+    }
+    &:nth-child(11) {
+      left: 50rem;
+      top: -31rem;
+    }
+    &:nth-child(12) {
+      left: 70rem;
+      top: -31rem;
+    }
+    &:nth-child(13) {
+      left: 10rem;
+      top: 62rem;
+    }
+    &:nth-child(14) {
+      left: 30rem;
+      top: 62rem;
+    }
+    &:nth-child(15) {
+      left: 50rem;
+      top: 62rem;
+    }
+    &:nth-child(16) {
+      left: 70rem;
+      top: 62rem;
+    }
+  }
+}
+
+.glass_container {
+  position: absolute;
+  height: 100svh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  font-family: "poppins", sans-serif;
+
+  .subhero_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+
+      &::selection {
+        background-color: #888;
+      }
+    }
+    p {
+      width: 40rem;
+
+      text-align: center;
+      &::selection {
+        background-color: #888;
+      }
+    }
+  }
+}

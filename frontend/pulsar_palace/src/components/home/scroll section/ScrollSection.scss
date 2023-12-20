@@ -1,0 +1,49 @@
+.scroll_container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 12.5rem);
+  padding: 0 6.25rem 0 6.25rem;
+
+  .left_scroll_section {
+    display: flex;
+    align-items: center;
+    gap: 6.25rem;
+    height: 100svh;
+    width: 100%;
+    color: white;
+    font-family: "Poppins", sans-serif;
+
+    .left_section_text {
+      height: 100svh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1,
+      p {
+        transform-origin: left;
+      }
+      #h1 {
+        transform-origin: right;
+      }
+
+      h1{
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .right_scroll_section {
+    display: flex;
+    align-items: center;
+    height: 100svh;
+    width: 50%;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: 23rem;
+    }
+  }
+}

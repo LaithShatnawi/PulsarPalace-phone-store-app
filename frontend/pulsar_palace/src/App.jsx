@@ -1,0 +1,28 @@
+import "./App.scss";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import { Route, Routes } from "react-router-dom";
+import Products from "./components/products/Products";
+import DataProvider from "./components/context/DataContext";
+import Information from "./components/products/information/Information";
+import Cart from "./components/products/cart/Cart";
+
+function App() {
+  return (
+    <>
+      <DataProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/product/details" element={<Information />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+        </Routes>
+        <Footer />
+      </DataProvider>
+    </>
+  );
+}
+
+export default App;

@@ -1,0 +1,63 @@
+.notif_container {
+  font-family: "poppins", sans-serif;
+  position: fixed;
+  background-color: aliceblue;
+  top: 5rem;
+  right: 2rem;
+  width: 20rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+
+  .icon {
+    font-size: 2rem;
+    color: rgb(17, 108, 17);
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      color: #888;
+    }
+  }
+}
+
+.notif_container_ex {
+  font-family: "poppins", sans-serif;
+  position: fixed;
+  background-color: aliceblue;
+  top: 5rem;
+  right: 2rem;
+  width: 20rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+
+  .icon {
+    font-size: 2rem;
+    color: rgb(252, 212, 54);
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      color: #888;
+    }
+  }
+}
