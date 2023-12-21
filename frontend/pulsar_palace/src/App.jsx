@@ -7,6 +7,7 @@ import Products from "./components/products/Products";
 import DataProvider from "./components/context/DataContext";
 import Information from "./components/products/information/Information";
 import Cart from "./components/products/cart/Cart";
+import Login from "./components/auth/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/products" element={<Products />}></Route>
           <Route path="/product/details" element={<Information />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
         <Footer />
       </DataProvider>

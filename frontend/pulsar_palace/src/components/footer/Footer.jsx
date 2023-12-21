@@ -57,16 +57,13 @@ const Footer = () => {
         </div>
         <div className="footer_form">
           <div className="input_container">
-            <label htmlFor="">Email</label>
-            <input type="text" />
+            <input type="text" placeholder="Email" />
           </div>
           <div className="input_container">
-            <label htmlFor="">Subject</label>
-            <input type="text" />
+            <input type="text" placeholder="Subject" />
           </div>
           <div className="input_container">
-            <label htmlFor="">Comment</label>
-            <textarea name="" id=""></textarea>
+            <textarea name="" id="" placeholder="Comment"></textarea>
           </div>
           <button>Submit</button>
         </div>
