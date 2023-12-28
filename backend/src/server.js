@@ -35,30 +35,30 @@ app.get("/", (req, res) => {
 //     }
 // })
 
-// app.post("/test", async (req, res) => {
-//     await Promise.all(data.map(async (el) => {
-//         try {
-//             const result = await phones.create({
-//                 brandName: el.brandName,
-//                 modelName: el.modelName,
-//                 images: el.images,
-//                 price: el.price,
-//                 networkDetails: el.networkDetails,
-//                 bodyDetails: el.bodyDetails,
-//                 displayDetails: el.displayDetails,
-//                 memoryDetails: el.memoryDetails,
-//                 mainCameraDetails: el.mainCameraDetails,
-//                 platformDetails: el.platformDetails
-//             });
-//             // `result` contains the newly created record
-//             console.log(result);
-//         } catch (error) {
-//             // Handle any errors that occur during the create operation
-//             console.error(error);
-//         }
-//     }));
-//     res.status(200).send("Welcome to the PulsarPalace API!");
-// });
+app.post("/test", async (req, res) => {
+    await Promise.all(data.map(async (el) => {
+        try {
+            const result = await phones.create({
+                brandName: el.brandName,
+                modelName: el.modelName,
+                images: el.images,
+                price: el.price,
+                networkDetails: el.networkDetails,
+                bodyDetails: el.bodyDetails,
+                displayDetails: el.displayDetails,
+                memoryDetails: el.memoryDetails,
+                mainCameraDetails: el.mainCameraDetails,
+                platformDetails: el.platformDetails
+            });
+            // `result` contains the newly created record
+            console.log(result);
+        } catch (error) {
+            // Handle any errors that occur during the create operation
+            console.error(error);
+        }
+    }));
+    res.status(200).send("Welcome to the PulsarPalace API!");
+});
 
 
 // app.get("/all-brands", async (req, res) => {

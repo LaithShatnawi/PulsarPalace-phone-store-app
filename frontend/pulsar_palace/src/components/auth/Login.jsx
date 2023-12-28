@@ -8,7 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
-  const [clicked, setClicked] = useState(false);
+  const [loginClicked, setloginClicked] = useState(false);
+  const [signupClicked, setsignupClicked] = useState(true);
+
   const variants = {
     right: {
       x: "350px",
@@ -43,76 +45,98 @@ const Login = () => {
       <div className="overlay_shade"></div>
       <div className="login_section">
         <motion.div className="login_box_container">
-          {!clicked ? (
+          {!loginClicked && (
             <>
               <motion.div
                 className="cover"
                 variants={variants}
-                initial="left"
-                animate={clicked ? "right" : "left"}
+                animate={loginClicked ? "right" : "left"}
               >
                 <motion.div className="title">Log In</motion.div>
                 <motion.button
                   className="arrow"
-                  onClick={() => setClicked(!clicked)}
+                  onClick={() => {
+                    setloginClicked(!loginClicked);
+                    setsignupClicked(!signupClicked);
+                  }}
                   variants={variants}
                   animate="btnLeft"
                 >
                   <FontAwesomeIcon icon={faChevronRight} />
                 </motion.button>
               </motion.div>
-              <motion.div
+              <motion.form
                 className="form"
                 variants={variants}
                 animate="formRight"
               >
-                <div className="input_container">
-                  <input type="text" placeholder="Username" required />
-                </div>
-                <div className="input_container">
-                  <input type="text" placeholder="Password" required />
-                </div>
+                <input type="text" placeholder="Username" required />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  autoComplete="current-password"
+                  required
+                />
                 <button className="log_sign_btn" type="submit">
                   Login
                 </button>
-              </motion.div>
+              </motion.form>
             </>
-          ) : (
+          )}
+          {!signupClicked && (
             <>
               <motion.div
                 className="cover"
                 variants={variants}
                 initial="left"
-                animate={clicked ? "right" : "left"}
+                animate={loginClicked ? "right" : "left"}
               >
                 <motion.div className="title">Sign Up</motion.div>
                 <motion.button
                   className="arrow"
-                  onClick={() => setClicked(!clicked)}
+                  onClick={() => {
+                    setsignupClicked(!signupClicked);
+                    setloginClicked(!loginClicked);
+                  }}
                   variants={variants}
                   animate="btnRight"
                 >
                   <FontAwesomeIcon icon={faChevronLeft} />
                 </motion.button>
               </motion.div>
-              <motion.div
+              <motion.form
                 className="form"
                 variants={variants}
                 animate="formLeft"
               >
-                <div className="input_container">
-                  <input type="text" placeholder="Email" required />
-                </div>
-                <div className="input_container">
-                  <input type="text" placeholder="Username" required />
-                </div>
-                <div className="input_container">
-                  <input type="text" placeholder="passowrd" required />
-                </div>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  autoComplete=""
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Username"
+                  autoComplete="username"
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  autoComplete="new-password"
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  autoComplete="new-password"
+                  required
+                />
                 <button className="log_sign_btn" type="submit">
                   Register
                 </button>
-              </motion.div>
+              </motion.form>
             </>
           )}
         </motion.div>
