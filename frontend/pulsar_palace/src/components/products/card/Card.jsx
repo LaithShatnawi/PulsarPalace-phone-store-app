@@ -6,6 +6,7 @@ import { useContext } from "react";
 
 const Card = ({ phone }) => {
   const data = useContext(DataContext);
+
   return (
     <Link to="/product/details" onClick={() => data.saveCookie(phone)}>
       <div className="card_container">

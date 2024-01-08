@@ -21,14 +21,28 @@
 
       .headers {
         width: 100%;
-        .pro {
-          padding-left: 13rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 2rem;
+        text-align: center;
+        .meme {
+          width: calc(723.28px - 64px);
+          display: flex;
+          gap: 1rem;
+          padding: 0 32px;
         }
-        .qu {
-          padding-left: 11rem;
-        }
+        .pro,
+        .qu,
         .pri {
-          padding-left: 14rem;
+          width: 33.33%;
+          text-align: center;
+        }
+        .fst {
+          width: 96px;
+        }
+        .fin {
+          width: 45.2px;
         }
       }
 
@@ -44,12 +58,11 @@
     .item_card {
       display: flex;
       gap: 1rem;
-      background-color: aliceblue;
       border-radius: 10px;
+      background-color: rgba($color: #424242, $alpha: 0.5);
 
       .closeBTN {
         height: fit-content;
-        color: black;
         display: flex;
         justify-content: center;
         padding: 1rem 1rem;
@@ -66,9 +79,9 @@
       .image {
         img {
           padding: 1rem;
-          width: 6rem;
+          width: 4rem;
           border-radius: 10px;
-          height: 6rem;
+          height: 4rem;
           object-fit: cover;
         }
       }
@@ -79,7 +92,8 @@
         align-items: center;
         gap: 1rem;
         padding: 2rem;
-        color: black;
+        color: white;
+        text-align: center;
         .name {
           width: 33.33%;
         }
@@ -90,7 +104,6 @@
 
         .price {
           width: 33.33%;
-          text-align: end;
         }
       }
     }

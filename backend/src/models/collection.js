@@ -19,6 +19,7 @@ class DataCollection {
     }
   }
 
+
   create(record) {
     return this.model.create(record);
   }
@@ -32,10 +33,14 @@ class DataCollection {
     return this.model.destroy({ where: { id: id } });
   }
 
-  async readHasMany(id, model){
+  deleteAll(id) {
+    return this.model.destroy({ where: { orderId: id } });
+  }
+
+  async readHasMany(id, model) {
     let data = await this.model.findOne({
-        where:{id : id},
-        include:model,
+      where: { id: id },
+      include: model,
     });
     return data;
   }

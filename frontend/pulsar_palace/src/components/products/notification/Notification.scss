@@ -11,6 +11,7 @@
   align-items: center;
   gap: 1rem;
   border-radius: 10px;
+  color: black;
 
   .icon {
     font-size: 2rem;
@@ -30,6 +31,10 @@
   }
 }
 
+#orange{
+  color: rgb(201, 59, 34);
+}
+
 .notif_container_ex {
   font-family: "poppins", sans-serif;
   position: fixed;
@@ -43,6 +48,8 @@
   align-items: center;
   gap: 1rem;
   border-radius: 10px;
+  color: black;
+
 
   .icon {
     font-size: 2rem;

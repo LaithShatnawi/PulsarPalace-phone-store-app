@@ -9,9 +9,12 @@ import { Pagination, Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Notification from "../notification/Notification";
+import { LoginContext } from "../../context/LoginContext";
 
 const Information = () => {
   const data = useContext(DataContext);
+  const loginState = useContext(LoginContext);
+
   const [quantity, setQuantity] = useState(1);
   const [show, setShow] = useState(false);
 
@@ -77,7 +80,9 @@ const Information = () => {
           <div
             className="add_to_cart_btn"
             onClick={() => {
-              data.addToCart(data.details, quantity);
+              if (loginState.loggedIn) {
+                data.addToCart(data.details, quantity);
+              }
               setShow(true);
             }}
           >

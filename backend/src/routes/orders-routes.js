@@ -21,7 +21,7 @@ async function getAllOrders(req, res) {
 async function getOrders(req, res) {
     let id = parseInt(req.params.id);
     const ordersData = await usersCollection.readHasMany(id, orders.model);
-    res.status(200).json(ordersData);
+    res.status(200).json(ordersData.orders);
 }
 
 async function getOneOrder(req, res) {

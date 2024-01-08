@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import cookie from "react-cookies";
+import { LoginContext } from "./LoginContext";
 
 export const DataContext = React.createContext();
 
 const DataProvider = (props) => {
+  const loginState = useContext(LoginContext);
+
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [details, setDetails] = useState({});
@@ -14,8 +17,12 @@ const DataProvider = (props) => {
   const [isInCart, setIsInCart] = useState(false);
 
   const savedDetails = cookie.load("details");
-  const savedCart = JSON.parse(localStorage.getItem("cart"));
-  // const savedQuantity = JSON.parse(localStorage.getItem("quantity"));
+  const savedCart = JSON.parse(
+    localStorage.getItem(`cart_${loginState.user.id}`)
+  );
+  const savedQuantity = JSON.parse(
+    localStorage.getItem(`quantity_${loginState.user.id}`)
+  );
 
   const saveCookie = (phone) => {
     setDetails(phone);
@@ -42,6 +49,7 @@ const DataProvider = (props) => {
     }
 
     const cartData = {
+      id: phone.id,
       item: phone.brandName + " " + phone.modelName,
       image: phone.images.split("||")[0],
       quantity: parsedNum,
@@ -51,13 +59,19 @@ const DataProvider = (props) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart, cartData];
       console.log("from context => ", updatedCart);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      localStorage.setItem(
+        `cart_${loginState.user.id}`,
+        JSON.stringify(updatedCart)
+      );
       return updatedCart;
     });
 
     setQuantity((q) => {
       const newQuantity = (q += parsedNum);
-      localStorage.setItem("quantity", JSON.stringify(newQuantity));
+      localStorage.setItem(
+        `quantity_${loginState.user.id}`,
+        JSON.stringify(newQuantity)
+      );
       return newQuantity;
     });
   };
@@ -66,12 +80,38 @@ const DataProvider = (props) => {
     setCart(() => {
       const updatedCart = cart.filter((el) => el.item != phone.item);
       console.log("from context => ", updatedCart);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      localStorage.setItem(
+        `cart_${loginState.user.id}`,
+        JSON.stringify(updatedCart)
+      );
       return updatedCart;
     });
     setQuantity((q) => {
       const newQuantity = (q -= parseInt(phone.quantity));
-      localStorage.setItem("quantity", JSON.stringify(newQuantity));
+      localStorage.setItem(
+        `quantity_${loginState.user.id}`,
+        JSON.stringify(newQuantity)
+      );
+      return newQuantity;
+    });
+  };
+
+  const emptyCart = () => {
+    setCart(() => {
+      const updatedCart = [];
+      console.log("from context => ", updatedCart);
+      localStorage.removeItem(
+        `cart_${loginState.user.id}`,
+        JSON.stringify(updatedCart)
+      );
+      return updatedCart;
+    });
+    setQuantity(() => {
+      const newQuantity = 0;
+      localStorage.removeItem(
+        `quantity_${loginState.user.id}`,
+        JSON.stringify(newQuantity)
+      );
       return newQuantity;
     });
   };
@@ -81,12 +121,16 @@ const DataProvider = (props) => {
   }, [cart, quantity]);
 
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart"));
+    const savedCart = JSON.parse(
+      localStorage.getItem(`cart_${loginState.user.id}`)
+    );
     if (savedCart) {
       setCart(savedCart);
     }
 
-    const savedQuantity = JSON.parse(localStorage.getItem("quantity"));
+    const savedQuantity = JSON.parse(
+      localStorage.getItem(`quantity_${loginState.user.id}`)
+    );
     if (savedQuantity) {
       setQuantity(savedQuantity);
     }
@@ -99,7 +143,7 @@ const DataProvider = (props) => {
       setData(response.data);
     };
     getData();
-  }, []);
+  }, [loginState.user.id]);
 
   const state = {
     data,
@@ -111,9 +155,10 @@ const DataProvider = (props) => {
     addToCart,
     cart: savedCart || cart,
     removeFromCart,
-    quantity: quantity,
+    quantity: savedQuantity || quantity,
     setQuantity,
     isInCart,
+    emptyCart,
   };
 
   return (

@@ -18,7 +18,7 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
   }
@@ -32,6 +32,30 @@
     gap: 2rem;
     color: white;
     font-family: "poppins", sans-serif;
+    position: relative;
+
+    .errorMsg{
+      font-size: 0.7rem;
+      color: rgb(168, 50, 50);
+      position: absolute;
+      transform: translateY(-5px);
+    }
+
+    .signup_text{
+      font-size: 0.8rem;
+      color: var(--bg-color);
+
+      span{
+        cursor: pointer;
+        color: rgb(165, 28, 175);
+        transition: 0.2s ease;
+
+        &:hover{
+          color: aliceblue;
+          transition: 0.2s ease;
+        }
+      }
+    }
 
     .log_sign_btn {
       cursor: pointer;
@@ -39,6 +63,12 @@
       font-family: "poppins", sans-serif;
       padding: 1rem 2rem;
       border-radius: 30px;
+      transition: 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 0 5px 1px aliceblue;
+        transition: 0.3s ease;
+      }
     }
 
     input {
@@ -69,9 +99,32 @@
     font-family: "poppins", sans-serif;
     position: relative;
 
-    .title {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .text {
       color: white;
-      font-size: 2rem;
+      text-align: center;
+      padding: 2rem 2rem;
+
+      div {
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .title {
+      background: -webkit-linear-gradient(
+        45deg,
+        rgb(115, 0, 255),
+        rgb(255, 102, 0)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
     }
 
     .arrow {
@@ -83,6 +136,12 @@
       height: 2rem;
       right: -15px;
       cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 0 8px 1px aliceblue;
+        transition: 0.2s ease;
+      }
     }
   }
 }
