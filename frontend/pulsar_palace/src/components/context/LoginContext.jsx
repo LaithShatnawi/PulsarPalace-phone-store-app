@@ -67,7 +67,6 @@ const LoginProvider = (props) => {
   const handleLogout = () => {
     setLoginState(false, null, {});
     navigate("/");
-    window.screen.reload();
   };
 
   const validateToken = (token) => {
