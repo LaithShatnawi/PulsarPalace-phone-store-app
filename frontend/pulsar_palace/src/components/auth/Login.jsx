@@ -115,7 +115,7 @@ const Login = () => {
     <>
       <div>
         <div className="overlay_shade"></div>
-        {/* <div className="login_section">
+        <div className="login_section">
           <motion.div className="login_box_container">
             {!loginClicked && (
               <>
@@ -256,7 +256,7 @@ const Login = () => {
               </>
             )}
           </motion.div>
-        </div> */}
+        </div>
         <div className="login_section_mobile">
           <motion.div className="login_box_container">
             {!loginClicked && (

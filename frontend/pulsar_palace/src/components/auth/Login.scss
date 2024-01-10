@@ -152,6 +152,7 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .login_section_mobile {
+  display: none;
   height: 100svh;
   background: url("../../assets/gradiant.jpg");
   background-size: cover;
@@ -326,6 +327,12 @@
   }
   .login_section_mobile .cover .text div {
     font-size: 1.2rem;
+  }
+  .login_section {
+    display: none;
+  }
+  .login_section_mobile {
+    display: flex;
   }
 }
 
