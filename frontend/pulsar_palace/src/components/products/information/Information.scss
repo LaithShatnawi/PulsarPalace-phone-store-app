@@ -221,7 +221,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
   .details_container .main_detials {
     flex-direction: column;
-    margin: 8.25rem 50px 50px 50px;
+    margin: 8.25rem 30px 50px 30px;
   }
   .details_container .main_detials .img_container {
     width: 90%;
@@ -241,10 +241,13 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 0.8rem;
   }
   .extra_details {
-    margin: 50px 50px;
+    margin: 50px 30px 150px 30px;
   }
   .extra_details h1 {
     font-size: 1.5rem;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    display: none;
   }
 }
 
@@ -255,8 +258,5 @@ input[type="number"]::-webkit-inner-spin-button {
   .extra_details .info_table .container {
     gap: 1rem;
     flex-direction: column;
-  }
-  .swiper-button-next, .swiper-button-prev{
-    display: none;
   }
 }

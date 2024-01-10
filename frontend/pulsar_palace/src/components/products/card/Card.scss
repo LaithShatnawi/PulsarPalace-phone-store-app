@@ -65,15 +65,18 @@
 
 @media (max-width: 410px) {
   .card_container {
-    width: 230px;
-    height: 300px;
+    width: 330px;
+    height: 400px;
+  }
+  .cards_container {
+    margin: 6.25rem 0;
   }
 
   .card_container .img_container {
-    height: 150px;
+    height: 250px;
   }
   .card_container .img_container img {
-    height: 150px;
+    height: 250px;
   }
   .card_container span {
     font-size: 0.7rem;

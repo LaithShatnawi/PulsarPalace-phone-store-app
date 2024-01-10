@@ -335,6 +335,9 @@
   .footer_container .review_section .reviews_container .swiper-button-prev {
     display: none;
   }
+  .copyright {
+    font-size: 0.6rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -359,7 +362,12 @@
 
   .footer_container .review_section .reviews_container {
     width: 400px;
-    height: 200px;
+    height: 250px;
+  }
+
+  .footer_container .review_section .reviews_container .slide .comment_box {
+    height: 40%;
+    width: 90%;
   }
 
   .footer_container
@@ -377,8 +385,8 @@
     .slide
     .review_img_container
     .review_img {
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
   #line1 {
     display: none;
@@ -389,6 +397,20 @@
   }
   .contact_section .footer_socials {
     justify-content: center;
+  }
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .comment_box
+    .second,
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .comment_box
+    .first {
+    font-size: 1rem;
   }
 }
 
@@ -403,7 +425,7 @@
   }
 
   .footer_container .review_section .reviews_container {
-    width: 200px;
+    width: 300px;
   }
   .footer_container .review_section .reviews_container .slide .comment_box {
     width: calc(100% - 40px);

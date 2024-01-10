@@ -146,98 +146,188 @@
   }
 }
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.login_section_mobile {
+  height: 100svh;
+  background: url("../../assets/gradiant.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login_box_container {
+    width: 700px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    font-family: "poppins", sans-serif;
+    position: relative;
+
+    .errorMsg {
+      font-size: 0.7rem;
+      color: rgb(168, 50, 50);
+      position: absolute;
+      transform: translateY(-5px);
+    }
+
+    .signup_text {
+      font-size: 0.8rem;
+      color: var(--bg-color);
+
+      span {
+        cursor: pointer;
+        color: rgb(165, 28, 175);
+        transition: 0.2s ease;
+
+        &:hover {
+          color: aliceblue;
+          transition: 0.2s ease;
+        }
+      }
+    }
+
+    .log_sign_btn {
+      cursor: pointer;
+      border: none;
+      font-family: "poppins", sans-serif;
+      padding: 0.5rem 2rem;
+      border-radius: 30px;
+      transition: 0.3s ease;
+      margin-top: 1rem;
+
+      &:hover {
+        box-shadow: 0 0 5px 1px aliceblue;
+        transition: 0.3s ease;
+      }
+    }
+
+    input {
+      font-family: "poppins", sans-serif;
+      width: 250px;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .input_container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  #register {
+    margin: 0;
+  }
+
+  .cover {
+    height: 40%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    // gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "poppins", sans-serif;
+    position: relative;
+
+    .coco {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .text {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+
+      div {
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .title {
+      background: -webkit-linear-gradient(
+        45deg,
+        rgb(115, 0, 255),
+        rgb(255, 102, 0)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+    }
+
+    .arrow {
+      position: absolute;
+      font-weight: 800;
+      border: none;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      right: -15px;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 0 8px 1px aliceblue;
+        transition: 0.2s ease;
+      }
+    }
+  }
+}
+
 //=======================================================================================
 //=======================================================================================
 
 @media (max-width: 762px) {
-  .login_section .login_box_container {
-    width: 500px;
-    height: 400px;
+  .login_section_mobile .login_box_container {
+    width: 600px;
   }
 
-  .login_section .cover img {
-    height: 30px;
+  .login_section_mobile .cover img {
     width: 30px;
+    height: 30px;
   }
-
-  .login_section .cover .title {
-    font-size: 1.5rem;
+  .login_section_mobile .cover .title {
+    font-size: 1.8rem;
   }
-
-  .login_section .cover .text {
-    font-size: 0.8rem;
-    padding: 1rem 1rem;
-  }
-
-  .login_section .cover .text div {
-    font-size: 1rem;
-  }
-
-  .login_section .form input {
-    width: 150px;
+  .login_section_mobile .cover .text {
     font-size: 0.8rem;
   }
-
-  .login_section .form .log_sign_btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.8rem;
-  }
-
-  .login_section .form .signup_text {
-    font-size: 0.6rem;
+  .login_section_mobile .cover .text div {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 510px) {
-  .login_section .login_box_container {
-    width: 350px;
-    height: 250px;
-  }
-
-  .login_section .cover {
-    gap: 0.8rem;
-  }
-
-  .login_section .cover img {
-    height: 20px;
-    width: 20px;
-  }
-
-  .login_section .cover .title {
-    font-size: 1rem;
-  }
-
-  .login_section .cover .text {
-    font-size: 0.6rem;
-    padding: 0.8rem 0.8rem;
-  }
-
-  .login_section .cover .text div {
-    font-size: 0.8rem;
-  }
-
-  .login_section .form input {
-    width: 100px;
-    font-size: 0.5rem;
-    padding: 0.1rem 0.3rem;
-  }
-
-  .login_section .form .log_sign_btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.6rem;
-  }
-
-  .login_section .form .signup_text {
-    font-size: 0.5rem;
-  }
-
-  .login_section .cover .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 0.6rem;
-  }
-
-  .login_section .form {
-    gap: 1rem;
-  }
 }

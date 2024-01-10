@@ -96,17 +96,12 @@
   .ord_cont .orders_container .single_conatiner222 .status {
     font-size: 0.6rem;
   }
-  .concon .orderdetails_container .element {
-    width: fit-content;
-  }
-  .ord_cont .orders_container .single_conatiner222 .el {
-    width: 40px;
-  }
-  .ord_cont .orders_container .single_conatiner .el {
-    width: 40px;
-  }
   .ord_cont .orders_container .single_conatiner {
     gap: 3rem;
+  }
+  .ord_cont .orders_container .single_conatiner222 .status_remove button {
+    top: 0;
+    right: 10px;
   }
 }
 @media (max-width: 690px) {
@@ -122,42 +117,37 @@
 }
 
 @media (max-width: 630px) {
-  .ord_cont .orders_container {
-    flex-direction: row;
-  }
   .ord_cont .orders_container .single_conatiner {
     display: none;
   }
   .ord_cont .orders_container .single_conatiner222 {
-    width: 100%;
-    height: fit-content;
-    width: 120px;
+    width: calc(100% - 1rem);
   }
 
   .ord_cont .orders_container .single_conatiner222 .address {
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .elelele {
-    flex-direction: column;
     gap: 1rem;
+    height: 4rem;
   }
   .concon .orderdetails_container {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .ord_cont .orders_container .single_conatiner222 .status_remove button {
-    top: 0;
-    right: 10px;
+    gap: 1rem;
   }
   .ord_cont {
-    padding: 100px 50px 0px 50px;
+    padding: 100px 30px 0px 30px;
   }
   .ord_cont .orders_container {
-    flex-wrap: wrap;
     justify-content: center;
+  }
+  .concon .orderdetails_container .element {
+    flex-direction: column;
+  }
+  .concon .orderdetails_container img {
+    width: 60px;
   }
 }
