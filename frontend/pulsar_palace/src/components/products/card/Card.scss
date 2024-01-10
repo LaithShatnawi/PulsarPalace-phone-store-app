@@ -88,3 +88,9 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 320px) {
+  .card_container {
+    width: 240px;
+  }
+}
