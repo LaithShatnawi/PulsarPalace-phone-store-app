@@ -22,25 +22,29 @@ const LoginProvider = (props) => {
 
   const handleLogin = async (username, password) => {
     const userData = { username, password };
-    const response = await axios.post(
-      `${import.meta.env.VITE_SERVER_URL}/signin`,
-      userData,
-      {
-        headers: {
-          Authorization: `Basic ${base64.encode(`${username}:${password}`)}`,
-        },
-      }
-    );
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_SERVER_URL}/signin`,
+        userData,
+        {
+          headers: {
+            Authorization: `Basic ${base64.encode(`${username}:${password}`)}`,
+          },
+        }
+      );
 
-    if (response.data) {
-      try {
-        validateToken(response.data);
-        console.log(response.data);
-        navigate("/");
-      } catch (e) {
-        setLoginState(loggedIn, token, user, e);
-        console.error(e);
+      if (response.data) {
+        try {
+          validateToken(response.data);
+          console.log(response.data);
+          navigate("/");
+        } catch (e) {
+          setLoginState(loggedIn, token, user, e);
+          console.error(e);
+        }
       }
+    } catch (e) {
+      setSignError(true);
     }
   };
 
@@ -65,8 +69,8 @@ const LoginProvider = (props) => {
   };
 
   const handleLogout = () => {
-    navigate("/");
     setLoginState(false, null, {});
+    window.location.assign("/");
   };
 
   const validateToken = (token) => {

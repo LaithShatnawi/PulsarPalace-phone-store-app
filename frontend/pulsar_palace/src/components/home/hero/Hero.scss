@@ -5,8 +5,7 @@
   justify-content: center;
   align-items: center;
   background: url("../../../assets/hexa\ platform.png");
-  background-size: cover; // scroll-snap-align: center;
-  // scroll-snap-stop: always;
+  background-size: cover;
   transition: 1s ease;
 
   .hero_banner {
@@ -26,44 +25,19 @@
       position: absolute;
     }
     .samsung {
-      width: fit-content;
-      height: 33.125rem;
+      width: 46.643%;
+      // height: 33.125rem;
       left: 3rem;
       z-index: 2;
+      aspect-ratio: 0.5999;
     }
     .iphone {
-      width: fit-content;
-      height: 37rem;
+      width: 69.465%;
+      // height: 37rem;
       z-index: 1;
       left: 8rem;
+      aspect-ratio: 0.7999;
     }
-    // .a1 {
-    //   width: 39rem;
-    //   height: 23.5rem;
-    //   bottom: 0rem;
-    //   left: 0rem;
-    //   opacity: 0;
-    // }
-    // .a2 {
-    //   width: 7.5rem;
-    //   height: 28.625rem;
-    //   top: 3.125rem;
-    //   left: 5rem;
-    // }
-    // .a3 {
-    //   width: 16.25rem;
-    //   height: 33.125rem;
-    //   top: 1.875rem;
-    //   left: 10rem;
-    //   opacity: 0;
-    // }
-    // .a4 {
-    //   width: 15.063rem;
-    //   height: 31.25rem;
-    //   top: 3.125rem;
-    //   right: 13.75rem;
-    //   left: 15.3rem;
-    // }
   }
 
   .hero_text {
@@ -129,5 +103,292 @@
         }
       }
     }
+  }
+  .disapear {
+    display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero_container {
+    background-size: contain;
+    background-repeat: round;
+  }
+
+  .samsung {
+    top: 20px;
+  }
+  .iphone {
+    top: 0px;
+  }
+
+  .hero_container .hero_text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1530px) {
+  .samsung {
+    top: 20px;
+  }
+  .iphone {
+    top: 0px;
+  }
+}
+
+@media (max-width: 1357px) {
+  .samsung {
+    top: 30px;
+  }
+  .iphone {
+    top: 0px;
+  }
+}
+
+@media (max-width: 1088px) {
+  .samsung {
+    top: 70px;
+  }
+  .iphone {
+    top: 50px;
+  }
+
+  .hero_container {
+    .hero_text {
+      h1 {
+        font-size: 2rem;
+
+        .pulsar {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 985px) {
+  .samsung {
+    top: 100px;
+  }
+  .iphone {
+    top: 80px;
+  }
+
+  .hero_container {
+    background-size: cover;
+
+    .hero_text {
+      h1 {
+        font-size: 2rem;
+
+        .pulsar {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .samsung {
+    top: 150px;
+  }
+  .iphone {
+    top: 130px;
+  }
+
+  .hero_container {
+    background-size: cover;
+
+    .hero_text {
+      h1 {
+        font-size: 1.5rem;
+
+        .pulsar {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .hero_container .hero_text .explore_button_container .explore_button {
+    width: fit-content;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+    color: black;
+  }
+}
+
+@media (max-width: 762px) {
+  .hero_container .hero_banner {
+    width: 500px;
+  }
+
+  .hero_container .hero_banner .iphone {
+    top: 100px;
+    width: 70%;
+    left: 200px;
+    z-index: 0;
+    aspect-ratio: 0.7999;
+    height: 140%;
+  }
+  .hero_container .hero_banner .samsung {
+    top: 100px;
+    width: 50%;
+    left: 100px;
+    z-index: 1;
+    aspect-ratio: 0.5999;
+    height: 130%;
+  }
+
+  .hero_container .hero_text {
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .hero_container {
+    background: url("../../../assets/hexa\ platform\ tall.png");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column-reverse;
+
+    .hero_text {
+      padding-left: 0;
+      .explore_button_container {
+        position: absolute;
+        bottom: 70px;
+        margin-top: 0;
+      }
+      h1 {
+        position: absolute;
+        top: 200px;
+        width: 80%;
+        text-shadow: 0px 0px 20px black;
+        .pulsar {
+          font-size: 2rem;
+        }
+      }
+      p {
+        position: absolute;
+        top: 350px;
+        font-size: 1rem;
+        width: 80%;
+        text-shadow: 0px 0px 20px black;
+        color: white;
+      }
+    }
+  }
+  .hero_container .disapear {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    gap: 2rem;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 40%;
+
+    .pulsar {
+      font-size: 1.5rem;
+    }
+
+    .highlight {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .explore_button_container {
+      width: fit-content;
+      border-radius: 30px;
+      .explore_button {
+        width: fit-content;
+        padding: 15px 35px 15px 35px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        border-radius: 30px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        transition: 0.3s ease-in-out;
+        color: black;
+
+        &:hover {
+          box-shadow: 0 0px 15px rgba(255, 255, 255, 0.4);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 641px) {
+  .hero_container .hero_banner {
+    width: 300px;
+  }
+  .hero_container .hero_banner .iphone {
+    top: 200px;
+    width: 60%;
+    left: 150px;
+    z-index: 0;
+    aspect-ratio: 0.7999;
+    height: 110%;
+  }
+  .hero_container .hero_banner .samsung {
+    top: 210px;
+    width: 50%;
+    left: 60px;
+    z-index: 1;
+    aspect-ratio: 0.5999;
+    height: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  .hero_container .hero_banner {
+    padding-right: 0px;
+    width: 280px;
+  }
+
+  .hero_container .hero_banner .iphone {
+    top: 250px;
+    width: 50%;
+    left: 120px;
+    height: 90%;
+  }
+  .hero_container .hero_banner .samsung {
+    top: 270px;
+    width: 40%;
+    left: 60px;
+    height: 80%;
+  }
+
+  .hero_container .hero_text h1 {
+    font-size: 1rem;
+  }
+
+  .hero_container .hero_text p {
+    font-size: 0.8rem;
   }
 }

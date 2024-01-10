@@ -41,3 +41,123 @@
   color: white;
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .ord_cont .orders_container .single_conatiner222 .el {
+    width: 60px;
+  }
+  .elelele {
+    gap: 5rem;
+  }
+  .concon .orderdetails_container {
+    gap: 0;
+  }
+  .ord_cont .orders_container .single_conatiner .el {
+    width: 60px;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .elelele {
+    font-size: 0.8rem;
+    gap: 3rem;
+  }
+  .concon .orderdetails_container {
+    font-size: 0.8rem;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    gap: 4rem;
+    font-size: 0.8rem;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 762px) {
+  .concon .orderdetails_container img {
+    height: 60px;
+  }
+  .concon .orderdetails_container {
+    font-size: 0.6rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    font-size: 0.6rem;
+  }
+  .elelele {
+    font-size: 0.6rem;
+  }
+  .ord_cont .orders_container .single_conatiner222 .status {
+    font-size: 0.6rem;
+  }
+  .concon .orderdetails_container .element {
+    width: fit-content;
+  }
+  .ord_cont .orders_container .single_conatiner222 .el {
+    width: 40px;
+  }
+  .ord_cont .orders_container .single_conatiner .el {
+    width: 40px;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    gap: 3rem;
+  }
+}
+@media (max-width: 690px) {
+  .elelele {
+    gap: 2rem;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    gap: 2rem;
+  }
+  .ord_cont .orders_container .single_conatiner222 .status_remove button {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 630px) {
+  .ord_cont .orders_container {
+    flex-direction: row;
+  }
+  .ord_cont .orders_container .single_conatiner {
+    display: none;
+  }
+  .ord_cont .orders_container .single_conatiner222 {
+    width: 100%;
+    height: fit-content;
+    width: 120px;
+  }
+
+  .ord_cont .orders_container .single_conatiner222 .address {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .elelele {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .concon .orderdetails_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ord_cont .orders_container .single_conatiner222 .status_remove button {
+    top: 0;
+    right: 10px;
+  }
+  .ord_cont {
+    padding: 100px 50px 0px 50px;
+  }
+  .ord_cont .orders_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

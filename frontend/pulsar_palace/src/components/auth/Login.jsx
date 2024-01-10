@@ -12,6 +12,7 @@ import { LoginContext } from "../context/LoginContext";
 
 const Login = () => {
   const loginState = useContext(LoginContext);
+  console.log(loginState.signError);
 
   const [loginClicked, setloginClicked] = useState(false);
   const [signupClicked, setsignupClicked] = useState(true);
@@ -42,7 +43,7 @@ const Login = () => {
 
   const variants = {
     right: {
-      x: "350px",
+      x: "100%",
       transition: { ease: "easeInOut", duration: 0.5 },
       "border-radius": "0 16px 16px 0",
     },
@@ -53,7 +54,7 @@ const Login = () => {
     },
 
     formLeft: {
-      x: "-350px",
+      x: "-100%",
       transition: { ease: "easeInOut", duration: 0.5 },
       "z-index": -1,
     },
@@ -64,10 +65,10 @@ const Login = () => {
     },
 
     btnRight: {
-      left: "-15px",
+      left: "-5%",
     },
     btnLeft: {
-      right: "-15px",
+      right: "-5%",
     },
   };
 

@@ -116,6 +116,36 @@ const Hero = () => {
             animate="show"
           />
         </div>
+        <div className="disapear">
+          <motion.h1>
+            <motion.span
+              className="pulsar"
+              variants={header}
+              initial="hidden"
+              animate="show"
+            >
+              Pulsar Palace
+            </motion.span>
+            <motion.span
+              className="highlight"
+              variants={text}
+              initial="hidden"
+              animate="show"
+            >
+              -Elevate Your Tech Game, Amplify Your Lifestyle.
+            </motion.span>
+          </motion.h1>
+          <Link to="/products" className="explore_button_container">
+            <motion.span
+              className="explore_button"
+              variants={button}
+              initial="hidden"
+              animate="show"
+            >
+              Explore...
+            </motion.span>
+          </Link>
+        </div>
       </motion.div>
     </>
   );

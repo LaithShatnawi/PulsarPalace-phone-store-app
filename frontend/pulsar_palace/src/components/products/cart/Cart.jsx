@@ -29,14 +29,19 @@ const Cart = () => {
         <h1>Shopping Cart</h1>
         <div className="cart_inner_container">
           <div className="cart_contents">
-            <div className="headers">
-              <div className="fst"></div>
-              <div className="meme">
-                <span className="pro">Product</span>
-                <span className="qu">Quantity</span>
-                <span className="pri">Price</span>
+            <div className="item_card1">
+              <div className="image">
+                <span></span>
               </div>
-              <div className="fin"></div>
+              <div className="description">
+                <div className="name">Product</div>
+                <div className="quantity">Quantity</div>
+                <div className="price">Price</div>
+              </div>
+              <div className="closeBTN">
+                <span >
+                </span>
+              </div>
             </div>
             <div className="inner">
               {state.cart.map((el, idx) => {

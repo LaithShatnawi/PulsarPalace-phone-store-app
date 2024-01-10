@@ -4,8 +4,6 @@ import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../context/DataContext";
 import Card from "./card/Card";
 import PaginationSlider from "./pagination/Pagination";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Products = () => {
   const data = useContext(DataContext);
@@ -52,7 +50,9 @@ const Products = () => {
               <div
                 className="searchFiltered"
                 onClick={() => handleClickForAll()}
-              >All</div>
+              >
+                All
+              </div>
               {data.data
                 .filter((el) => {
                   const output =

@@ -34,23 +34,23 @@
     font-family: "poppins", sans-serif;
     position: relative;
 
-    .errorMsg{
+    .errorMsg {
       font-size: 0.7rem;
       color: rgb(168, 50, 50);
       position: absolute;
       transform: translateY(-5px);
     }
 
-    .signup_text{
+    .signup_text {
       font-size: 0.8rem;
       color: var(--bg-color);
 
-      span{
+      span {
         cursor: pointer;
         color: rgb(165, 28, 175);
         transition: 0.2s ease;
 
-        &:hover{
+        &:hover {
           color: aliceblue;
           transition: 0.2s ease;
         }
@@ -143,5 +143,101 @@
         transition: 0.2s ease;
       }
     }
+  }
+}
+
+//=======================================================================================
+//=======================================================================================
+
+@media (max-width: 762px) {
+  .login_section .login_box_container {
+    width: 500px;
+    height: 400px;
+  }
+
+  .login_section .cover img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .login_section .cover .title {
+    font-size: 1.5rem;
+  }
+
+  .login_section .cover .text {
+    font-size: 0.8rem;
+    padding: 1rem 1rem;
+  }
+
+  .login_section .cover .text div {
+    font-size: 1rem;
+  }
+
+  .login_section .form input {
+    width: 150px;
+    font-size: 0.8rem;
+  }
+
+  .login_section .form .log_sign_btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .login_section .form .signup_text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .login_section .login_box_container {
+    width: 350px;
+    height: 250px;
+  }
+
+  .login_section .cover {
+    gap: 0.8rem;
+  }
+
+  .login_section .cover img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .login_section .cover .title {
+    font-size: 1rem;
+  }
+
+  .login_section .cover .text {
+    font-size: 0.6rem;
+    padding: 0.8rem 0.8rem;
+  }
+
+  .login_section .cover .text div {
+    font-size: 0.8rem;
+  }
+
+  .login_section .form input {
+    width: 100px;
+    font-size: 0.5rem;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .login_section .form .log_sign_btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
+  }
+
+  .login_section .form .signup_text {
+    font-size: 0.5rem;
+  }
+
+  .login_section .cover .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.6rem;
+  }
+
+  .login_section .form {
+    gap: 1rem;
   }
 }

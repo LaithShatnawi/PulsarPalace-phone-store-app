@@ -173,7 +173,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 1rem;
+      padding-top: 2rem;
 
       .subscribe {
         font-size: 1rem;
@@ -244,5 +244,197 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1060px) {
+  .contact_section .footer_socials .input_container .subscribe {
+    font-size: 0.7rem;
+  }
+  .contact_section .footer_links {
+    font-size: 0.7rem;
+  }
+
+  .contact_section .footer_socials .input_container input {
+    width: 130px;
+    height: 15px;
+  }
+
+  .contact_section .footer_socials .input_container button {
+    padding: 0.1rem 1rem;
+  }
+  .contact_section .footer_socials .icons_cont {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .contact_section .footer_socials .input_container .subscribe {
+    font-size: 0.6rem;
+  }
+  .contact_section .footer_links {
+    font-size: 0.6rem;
+    gap: 20px;
+  }
+
+  .contact_section .footer_socials .input_container input {
+    width: 100px;
+    height: 10px;
+  }
+
+  .contact_section .footer_socials .input_container button {
+    padding: 0rem 0.8rem;
+  }
+  .contact_section .footer_socials .icons_cont {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 726px) {
+  .contact_section .footer_socials .input_container .subscribe {
+    font-size: 0.5rem;
+  }
+  .contact_section .footer_links {
+    font-size: 0.5rem;
+    gap: 20px;
+  }
+
+  .contact_section .footer_socials .input_container .textttt {
+    flex-direction: column;
+  }
+
+  .contact_section .footer_socials .input_container input {
+    width: 120px;
+    height: 8px;
+  }
+
+  .contact_section .footer_socials .input_container button {
+    padding: 0rem 0.6rem;
+  }
+  .contact_section .footer_socials .icons_cont {
+    font-size: 1rem;
+  }
+
+  .footer_container .review_section .testimonials {
+    font-size: 1.5rem;
+  }
+
+  .footer_container .review_section .reviews_container {
+    width: 500px;
+  }
+
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .comment_box
+    .quote {
+    font-size: 0.65rem;
+  }
+  .footer_container .review_section .reviews_container .swiper-button-next,
+  .footer_container .review_section .reviews_container .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact_section .footer_socials .input_container input {
+    width: 80px;
+    height: 8px;
+    font-size: 0.5rem;
+  }
+
+  .contact_section .footer_socials {
+    padding-right: 40px;
+  }
+
+  .contact_section .footer_links {
+    padding-left: 40px;
+  }
+
+  .contact_section .footer_socials .input_container button {
+    padding: 0rem 0.6rem;
+    font-size: 0.5rem;
+  }
+
+  .footer_container .review_section .reviews_container {
+    width: 400px;
+    height: 200px;
+  }
+
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .comment_box
+    .quote {
+    font-size: 0.5rem;
+  }
+
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .review_img_container
+    .review_img {
+    height: 2rem;
+    width: 2rem;
+  }
+  #line1 {
+    display: none;
+  }
+  .contact_section .footer_links {
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .contact_section .footer_socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 410px) {
+  .contact_section .footer_links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact_section .footer_links .links {
+    gap: 3px;
+  }
+
+  .footer_container .review_section .reviews_container {
+    width: 200px;
+  }
+  .footer_container .review_section .reviews_container .slide .comment_box {
+    width: calc(100% - 40px);
+  }
+
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .comment_box
+    .quote {
+    font-size: 0.4rem;
+  }
+  .footer_container
+    .review_section
+    .reviews_container
+    .slide
+    .review_img_container
+    .review_img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .contact_section .footer_links {
+    padding-left: 15px;
+  }
+  .contact_section .footer_socials {
+    padding-right: 15px;
+  }
+  .contact_section .footer_links {
+    justify-content: center;
+    margin-top: 20px;
   }
 }

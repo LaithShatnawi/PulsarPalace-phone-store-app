@@ -11,7 +11,7 @@ const ScrollSection = () => {
   return (
     <div className="scroll_container">
       <div className="left_scroll_section">
-        <div className="left_section_text">
+        <div className="left_section_text start">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -20,7 +20,7 @@ const ScrollSection = () => {
             Cutting-Edge Displays
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: "-5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
@@ -35,17 +35,17 @@ const ScrollSection = () => {
         <div className="right_scroll_section">
           <motion.img
             src={display}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: "5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           />
         </div>
       </div>
-      <div className="left_scroll_section">
+      <div className="left_scroll_section" id="flip">
         <div className="right_scroll_section">
           <motion.img
             src={performance}
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: "-5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           />
@@ -61,7 +61,7 @@ const ScrollSection = () => {
           </motion.h1>
           <motion.p
             id="h1"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: "5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
@@ -75,7 +75,7 @@ const ScrollSection = () => {
         </div>
       </div>
       <div className="left_scroll_section">
-        <div className="left_section_text">
+        <div className="left_section_text start">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -84,7 +84,7 @@ const ScrollSection = () => {
             Capture Every Moment
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: "-5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
@@ -99,17 +99,17 @@ const ScrollSection = () => {
         <div className="right_scroll_section">
           <motion.img
             src={capture}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: "5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           />
         </div>
       </div>
-      <div className="left_scroll_section">
+      <div className="left_scroll_section" id="flip">
         <div className="right_scroll_section">
           <motion.img
             src={connect}
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: "-5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           />
@@ -125,7 +125,7 @@ const ScrollSection = () => {
           </motion.h1>
           <motion.p
             id="h1"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: "5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
@@ -139,7 +139,7 @@ const ScrollSection = () => {
         </div>
       </div>
       <div className="left_scroll_section">
-        <div className="left_section_text">
+        <div className="left_section_text start">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -148,7 +148,7 @@ const ScrollSection = () => {
             Sleek Design, Premium Build
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: "-5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
@@ -164,7 +164,7 @@ const ScrollSection = () => {
         <div className="right_scroll_section">
           <motion.img
             src={design}
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: "5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           />

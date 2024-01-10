@@ -70,3 +70,9 @@
     }
   }
 }
+
+@media (max-width: 645px) {
+  .search_container .search_list{
+    width: fit-content;
+  }
+}

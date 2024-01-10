@@ -12,6 +12,7 @@
   gap: 1rem;
   border-radius: 10px;
   color: black;
+  z-index: 6;
 
   .icon {
     font-size: 2rem;
@@ -31,7 +32,7 @@
   }
 }
 
-#orange{
+#orange {
   color: rgb(201, 59, 34);
 }
 
@@ -49,7 +50,7 @@
   gap: 1rem;
   border-radius: 10px;
   color: black;
-
+  z-index: 6;
 
   .icon {
     font-size: 2rem;
@@ -66,5 +67,23 @@
     &:hover {
       color: #888;
     }
+  }
+}
+
+@media (max-width: 540px) {
+  .notif_container_ex {
+    width: 14rem;
+    font-size: 0.6rem;
+  }
+  .notif_container_ex .icon {
+    font-size: 1rem;
+  }
+
+  .notif_container {
+    width: 14rem;
+    font-size: 0.6rem;
+  }
+  .notif_container .icon {
+    font-size: 1rem;
   }
 }

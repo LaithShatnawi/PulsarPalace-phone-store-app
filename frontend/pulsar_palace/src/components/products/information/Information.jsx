@@ -104,7 +104,7 @@ const Information = () => {
         <div className="info_table">
           <div className="container">
             <div className="title">Body:</div>
-            <div>
+            <div className="yes">
               <div>
                 <b>Dimentions: </b>height:{" "}
                 {data.details.bodyDetails.dimensions.height}, width:{" "}
@@ -118,7 +118,7 @@ const Information = () => {
           </div>
           <div className="container">
             <div className="title">Network:</div>
-            <div>
+            <div className="yes">
               <div>
                 <b>Bands: </b>
                 {data.details.networkDetails.bands.map((el, idx) => {
@@ -133,7 +133,7 @@ const Information = () => {
           </div>
           <div className="container">
             <div className="title">Platform:</div>
-            <div>
+            <div className="yes">
               <div>
                 <b>Chipset: </b>
                 {data.details.platformDetails.chipset}

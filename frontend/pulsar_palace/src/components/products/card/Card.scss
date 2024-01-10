@@ -62,3 +62,26 @@
     // color: red;
   }
 }
+
+@media (max-width: 410px) {
+  .card_container {
+    width: 230px;
+    height: 300px;
+  }
+
+  .card_container .img_container {
+    height: 150px;
+  }
+  .card_container .img_container img {
+    height: 150px;
+  }
+  .card_container span {
+    font-size: 0.7rem;
+  }
+  .card_container .desc_and_price {
+    margin-top: 0;
+  }
+  .card_container .model {
+    font-size: 1rem;
+  }
+}
