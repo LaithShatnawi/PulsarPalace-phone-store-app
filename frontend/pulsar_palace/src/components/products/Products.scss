@@ -4,12 +4,12 @@
   flex-wrap: wrap;
   gap: 3rem;
   margin: 6.25rem 6.25rem;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 .products_title {
   color: white;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   font-size: 4rem;
   text-align: center;
   margin-top: 6.25rem;
@@ -21,7 +21,7 @@
   align-items: center;
   gap: 0.5rem;
   color: white;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   position: relative;
 
   input {
@@ -29,7 +29,7 @@
     border-radius: 30px;
     border: none;
     padding: 5px 1rem;
-    font-family: "poppins", sans-serif;
+    font-family: 'poppins', sans-serif;
   }
 
   .searchIcon_cont {
@@ -69,6 +69,11 @@
       cursor: pointer;
     }
   }
+}
+
+.pagination div {
+  display: flex;
+  gap: 10px;
 }
 
 @media (max-width: 645px) {
