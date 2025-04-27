@@ -125,7 +125,7 @@ app.post("/test", async (req, res) => {
 module.exports = {
     start: (port) => {
         app.listen(port, () => {
-            console.log(`Server Up on ${port}`);
+            console.log(`Server Up on http://localhost:${port}`);
         });
     },
 };
